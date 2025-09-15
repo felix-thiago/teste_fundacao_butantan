@@ -8,6 +8,7 @@ Este projeto é um pipeline de dados em Python que automatiza a conversão de cu
 
 - **Extração de Dados**: Importa dados de pedidos a partir de arquivos CSV, com tratamento de erros para garantir a robustez do processo.
 - **Limpeza e Padronização**: Padroniza os dados de moedas, garantindo que inconsistências como `RMB` sejam convertidas para o padrão internacional (`CNY`), evitando falhas na comunicação com as APIs.
+- **Cálculo de Preço Unitário**: Adiciona uma etapa de engenharia de dados para calcular o preço unitário de cada item, dividindo o valor total pela quantidade.
 - **Busca de Cotação Inteligente**: O script prioriza a **API PTAX do Banco Central do Brasil** para as moedas principais. Para o Yuan Chinês (`CNY`), ele usa uma **cotação cruzada**, buscando o valor do Dólar (`USD`) em uma API de terceiros para garantir a conversão, mesmo quando a API oficial não tem os dados.
 - **Geração de Relatórios Detalhados**: Cria um único arquivo Excel com duas abas essenciais:
     - `Últimos Preços`: Relatório final com o último preço de compra de cada material, com os valores convertidos para BRL.
